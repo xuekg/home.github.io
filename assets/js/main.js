@@ -36,7 +36,7 @@ function getBingImages(imgUrls) {
 	var indexName = "bing-image-index";
 	var index = sessionStorage.getItem(indexName);
 	var $panel = $('#panel');
-	if (isNaN(index) || index == 7) index = 0;
+	if (isNaN(index) || index == 35) index = 0;
 	else index++;
 	var imgUrl = imgUrls[index];
 	var url = "https://www.bing.com" + imgUrl;
@@ -45,7 +45,7 @@ function getBingImages(imgUrls) {
 	sessionStorage.setItem(indexName, index);
 }
 
-function decryptEmail(encoded) {      
+function decryptEmail(encoded) {
 	var address = atob(encoded);
 	window.location.href = "mailto:" + address;
 }
